@@ -1,0 +1,15 @@
+C:\Users\MSI ThinGF63\Desktop\exc_1\bin\Debug\net9.0\exc_1.exe
+C:\Users\MSI ThinGF63\Desktop\exc_1\bin\Debug\net9.0\exc_1.deps.json
+C:\Users\MSI ThinGF63\Desktop\exc_1\bin\Debug\net9.0\exc_1.runtimeconfig.json
+C:\Users\MSI ThinGF63\Desktop\exc_1\bin\Debug\net9.0\exc_1.dll
+C:\Users\MSI ThinGF63\Desktop\exc_1\bin\Debug\net9.0\exc_1.pdb
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.AssemblyInfoInputs.cache
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.AssemblyInfo.cs
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.csproj.CoreCompileInputs.cache
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.sourcelink.json
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.dll
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\refint\exc_1.dll
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.pdb
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\exc_1.genruntimeconfig.cache
+C:\Users\MSI ThinGF63\Desktop\exc_1\obj\Debug\net9.0\ref\exc_1.dll
