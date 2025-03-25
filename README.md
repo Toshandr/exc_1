@@ -6,4 +6,5 @@
 3.Re-entering the user if he made a mistake\
 4.Checks if file deletion is possible\
 5.Writes data to a file\
-6.Age verification
+6.Age verification\
+7.The ability to enter a large amount of data within a single program lifecycle
