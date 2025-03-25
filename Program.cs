@@ -6,12 +6,16 @@ class Program
 
     public static bool Checker(string? name, int age){
         bool status = true;
-        if(name == null){
+        if(string.IsNullOrWhiteSpace(name) || name == null){
             Console.WriteLine("Вы не ввели имя");
             return !status;
         }
-        if(age < 18){
+        else if(age < 18){
             Console.WriteLine("Вы ещё малы, гуляйте");
+            return !status;
+        }
+        else if (age > 120){
+            Console.WriteLine("Вы слишком стары, уходите");
             return !status;
         }
         return status;
@@ -76,6 +80,9 @@ class Program
                 if(ans == "НЕТ"){
                     break;
                 }
+            }
+            else{
+                break;
             }
 
         }
