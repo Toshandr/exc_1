@@ -27,6 +27,11 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
+        string PATH = @"C:\Users\MSI ThinGF63\Desktop\exc_1\spisok";
+        
+        if(!File.Exists(PATH)){
+            File.Create(PATH);
+        }
 
         string? NAME = "";
         int AGE = 0;
