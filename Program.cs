@@ -17,18 +17,20 @@ class Program
         return status;
     }
 
+    public static void Request(){
+        
+    }
+
 
     public delegate bool my_delegate(string? Name, int Age);
     public static event my_delegate Notify;
 
 
-    /*  1. Сделать файл txt и туда добавлять пользователей
-        2. Проверка на сущестование файла, если не то создать */
     static void Main(string[] args)
     {
         Console.Clear();
-        string PATH = @"C:\Users\MSI ThinGF63\Desktop\exc_1\spisok";
-        
+        string PATH = @"C:\Users\MSI ThinGF63\Desktop\exc_1\users";
+
         if(!File.Exists(PATH)){
             File.Create(PATH);
         }
@@ -38,35 +40,46 @@ class Program
 
         my_delegate my_delegate_ekz = Checker;
         Notify += Checker;
-
-        bool cycle = true;
+ 
 
         Console.WriteLine("Здравствуйте!");
-        while(cycle){
-            try{
-                Console.Write("Введите ваше имя: ");
-                string? name = Console.ReadLine();
-                NAME = name;
-                Console.Write("Введите ваш возраст: ");
-                int age = Convert.ToInt32(Console.ReadLine());
-                AGE = age;
+        while(true){
+            while(true){
+                try{
+                    Console.Write("Введите ваше имя: ");
+                    string? name = Console.ReadLine();
+                    NAME = name;
+                    Console.Write("Введите ваш возраст: ");
+                    int age = Convert.ToInt32(Console.ReadLine());
+                    AGE = age;
+                }
+                catch(Exception ex){
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Ошибка:{ex.Message}");
+                    Console.ResetColor();
+                    Console.WriteLine("Введите корректные данные");
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
+                break;
             }
-            catch(Exception ex){
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Ошибка:{ex.Message}");
-                Console.ResetColor();
-                Console.WriteLine("Введите корректные данные");
-                Console.ReadKey();
+            if (Notify?.Invoke(NAME, AGE) == true){
+                using (StreamWriter writer = new StreamWriter(PATH, true))
+                {
+                    writer.WriteLineAsync($"{NAME} {AGE}");
+                }
+                Console.WriteLine("Вы в списке");
+                Console.WriteLine("Хотите добавить ещё кого то в список? Да/Нет");
+                string? ans = Console.ReadLine()?.ToUpper();
                 Console.Clear();
-                continue;
+                if(ans == "НЕТ"){
+                    break;
+                }
             }
-            break;
+
         }
-        if (Notify?.Invoke(NAME, AGE) == true){
-            Console.WriteLine("Вы в списке");
-        }
-        else{
-            Console.WriteLine("Возвращайтесь, когда придумаете верные данные");
-        }
+        Console.WriteLine("Завершение программы");
+        Console.WriteLine("____________________");
     }
 }
